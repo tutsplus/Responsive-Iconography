@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- meta-->
+    <title>Responsve SVG | Iconic</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.png">
+    <!-- css-->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/prettify.css">
+    <!--[if IE 9]>
+    <link id="css-ie9" href="css/ie9.css" rel="stylesheet" type="text/css">
+    <![endif]-->
+    <script src="/js/vendor/modernizr.custom.js"></script>
+    <!-- Fonts-->
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italibc,700italic,900italic" rel="stylesheet" type="text/css">
+    <!-- meta-->
+    <meta content="">
+    <style>
+      body.subpage.demo article pre.prettyprint {
+        margin: 0;
+      }
+      body.subpage.demo .code-samples h5 {
+        margin: 20px 0 10px 0;
+      }
+
+    </style>
+
+  </head>
+  <body class="subpage responsive-svg demo">
+    <section>
+      <article class="head">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-sm-offset-2 text-center text-muted">
+              <h6>Proof of Concept</h6>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3 text-center">
+              <h4>SVG icon stack state changing based on size of container element</h4>
+              <p>The icon being shown, from the three sizes available, automatically changes to maintain legibility as the size context in which it is displayed updates.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <div class="text-center">
+                <p>&nbsp;</p>
+                <p class="text-muted"><em>Adjust the slider to see the icon change.</em></p>
+                <input id="icon-size-range" type="range" name="points" min="16" max="256">
+                <p>&nbsp;</p>
+              </div>
+              <div id="demo">
+                <img class="iconic iconic-mic" src="images/mic-responsive.svg" height="128" />
+              </div>
+            </div>
+          </div>
+
+          <div class="row code-samples">
+            <div class="col-md-6 col-md-offset-3">
+
+              <h5>HTML</h5>
+              <pre class="prettyprint text-left">&lt;img src="images/mic-responsive.svg"&gt;</pre>
+
+              <h5>SVG (from mic-responsive.svg)</h5>
+              <pre class="prettyprint text-left pre-scrollable">&lt;svg id=&quot;mic&quot; class=&quot;responsive&quot; version=&quot;1.1&quot; xmlns=&quot;http://www.w3.org/2000/svg&quot; xmlns:xlink=&quot;http://www.w3.org/1999/xlink&quot; x=&quot;0px&quot; y=&quot;0px&quot; width=&quot;512px&quot; height=&quot;512px&quot; viewBox=&quot;0 0 512 512&quot; style=&quot;enable-background:new 0 0 512 512;&quot; xml:space=&quot;preserve&quot;&gt;
+
+    &lt;style&gt;
+        svg#mic.responsive { width: 100%; }
+    &lt;/style&gt;
+
+    &lt;style id=&quot;embeded-media-queries&quot;&gt;
+        @media screen and (max-width: 64px) {
+            svg#mic.responsive g#medium,
+            svg#mic.responsive g#large {
+               display: none;
+            }
+        }
+
+        @media screen and (min-width: 65px) and (max-width: 128px) {
+            svg#mic.responsive g#small,
+            svg#mic.responsive g#large {
+               display: none;
+            }
+        }
+
+        @media screen and (min-width: 129px) {
+            svg#mic.responsive g#small,
+            svg#mic.responsive g#medium {
+               display: none;
+            }
+        }
+    &lt;/style&gt;
+
+    &lt;g id=&quot;small&quot; transform=&quot;translate(64,0)&quot; width=&quot;384px&quot; height=&quot;512px&quot;&gt;
+        (:SNIP: the small SVG shape paths)
+    &lt;/g&gt;
+
+    &lt;g id=&quot;medium&quot; transform=&quot;translate(128,0)&quot; width=&quot;256px&quot; height=&quot;512px&quot;&gt;
+        (:SNIP: the medium SVG shape paths)
+    &lt;/g&gt;
+
+    &lt;g id=&quot;large&quot; transform=&quot;translate(132,0)&quot; width=&quot;248px&quot; height=&quot;512px&quot;&gt;
+        (:SNIP: the large SVG shape paths)
+    &lt;/g&gt;
+
+&lt;/svg&gt;
+</pre>
+
+          </div>
+        </div>
+      </article>
+    </section>
+    <div class="menu">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <ul class="pager">
+              <li class="text-center"><a data-toggle="modal" href="#modal-kickstarter" class="btn btn-default btn-kick btn-round">Get Iconic</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <p><a href="https://twitter.com/share" class="twitter-share-button" data-via="useiconic">Tweet</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <p class="text-muted"><small>Laboriously loved by&nbsp;<a href="http://waybury.com" class="waybury-link">Waybury</a></small></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div id="modal-kickstarter" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-6">
+                  <h2>Make it happen</h2>
+                  <p>We want you to have Iconic and we <em>definitely</em> want you to use it. There's just one thing you need to do to make this a reality. <a href="http://www.kickstarter.com/projects/207474036/iconic-advanced-icons-for-the-modern-web" class="kick">Back Iconic on Kickstarter</a> and <a href="https://twitter.com/useiconic" class="tweet">spread the word</a>. OK, that's two things, but you get the point.</p>
+                  <p>In all seriousness, please help us get Iconic in your hands (figuratively). We know you'll love it.</p>
+                  <p>&nbsp;</p>
+                  <p><a href="http://www.kickstarter.com/projects/207474036/iconic-advanced-icons-for-the-modern-web" class="btn btn-kick btn-round">Back us on Kickstarter</a></p>
+                </div>
+                <div class="col-sm-6 embed-kickstarter">
+                  <iframe frameborder="0" height="380" width="220" src="http://www.kickstarter.com/projects/207474036/iconic-advanced-icons-for-the-modern-web/widget/card.html"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/vendor/jquery-1.9.1.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/prettify.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/site.js"></script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  </body>
+</html>
+

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- meta-->
+    <title>Styling states in icons | Iconic</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="shortcut icon" href="/favicon.png">
+    <!-- css-->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/prettify.css">
+    <link rel="stylesheet" href="css/responsive.css"><!--[if IE 9]>
+    <link id="css-ie9" href="css/ie9.css" rel="stylesheet" type="text/css">
+    <![endif]-->
+    <script src="/js/vendor/modernizr.custom.js"></script>
+    <!-- Fonts-->
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic" rel="stylesheet" type="text/css">
+    <!-- meta-->
+    <meta content="">
+    <style>
+      @font-face {
+        font-family: 'Iconic';
+        src: url('fonts/Iconic-Large.eot') format('eot');
+        src: url('fonts/Iconic-Large.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/Iconic-Large.woff') format("woff");
+        font-weight: 500;
+        font-style: normal;/* IE9 Compat Modes */
+        /* Modern Browsers */
+      }
+      @font-face {
+        font-family: 'Iconic';
+        src: url('fonts/Iconic-Medium.eot') format('eot');
+        src: url('fonts/Iconic-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/Iconic-Medium.woff') format("woff");
+        font-weight: 400;
+        font-style: normal;/* IE9 Compat Modes */
+        /* Modern Browsers */
+      }
+      @font-face {
+        font-family: 'Iconic';
+        src: url('fonts/Iconic-Small.eot') format('eot');
+        src: url('fonts/Iconic-Small.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('fonts/Iconic-Small.woff') format("woff");
+        font-weight: 300;
+        font-style: normal;/* IE9 Compat Modes */
+        /* Modern Browsers */
+      }
+
+      .iconic {
+        font-family: 'Iconic';
+        display: inline-block;
+        background: #efefef;
+        text-align: center;
+        padding:20px;
+        width:128px;
+        border-radius: 3px;
+        font-size:16px;
+        font-weight: 300;
+        line-height: .75;
+      }
+
+      .iconic.iconic-microphone:before {
+        content: '\1f3a4';
+      }
+
+      .iconic[min-width~="100px"] {
+        font-weight: 400;
+        font-size:64px;
+      }
+
+      .iconic[min-width~="200px"] {
+        font-weight: 500;
+        font-size:255px;
+      }
+
+    </style>
+
+  </head>
+  <body class="subpage smart-icons demo">
+    <section>
+      <article class="head">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-sm-offset-2 text-center text-muted">
+              <h6>Proof of Concept</h6>
+            </div>
+          </div>
+        </div>
+      </article>
+      <article>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 col-md-offset-3">
+              <h4>Using CSS to display state within an icon</h4>
+              <p>You don't need a separate file for every state of an icon, all you need is simple CSS. Iconic is built exactly for this purpose.</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <div class="text-center">
+                <p>&nbsp;</p>
+                <p class="text-muted"><em>Adjust the slider to see the icon change.</em></p>
+                <input id="icon-size-range" type="range" name="points" value="128" min="48" max="300">
+                <p>&nbsp;</p>
+              </div>
+              <div class="icons">
+                <span class="iconic iconic-microphone"></span>
+              </div>
+
+            </div>
+          </div>
+          <div class="row code-samples">
+            <div class="col-md-6 col-md-offset-3">
+              <h5>HTML</h5>
+              <pre class="prettyprint text-left">&lt;span class=&quot;iconic iconic-microphone&quot;&gt;&lt;span /&gt;</pre>
+              <h5>CSS</h5>
+              <pre class="prettyprint text-left pre-scrollable">@font-face {
+  font-family: 'Iconic';
+  src: url('fonts/Iconic-Large.eot') format('eot');
+  src: url('fonts/Iconic-Large.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+   url('fonts/Iconic-Large.woff') format("woff");
+  font-weight: 500;
+  font-style: normal;/* IE9 Compat Modes */
+  /* Modern Browsers */
+}
+@font-face {
+  font-family: 'Iconic';
+  src: url('fonts/Iconic-Medium.eot') format('eot');
+  src: url('fonts/Iconic-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+   url('fonts/Iconic-Medium.woff') format("woff");
+  font-weight: 400;
+  font-style: normal;/* IE9 Compat Modes */
+  /* Modern Browsers */
+}
+@font-face {
+  font-family: 'Iconic';
+  src: url('fonts/Iconic-Small.eot') format('eot');
+  src: url('fonts/Iconic-Small.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+   url('fonts/Iconic-Small.woff') format("woff");
+  font-weight: 300;
+  font-style: normal;/* IE9 Compat Modes */
+  /* Modern Browsers */
+}
+
+.iconic {
+  font-family: 'Iconic';
+  display: inline-block;
+  background: #efefef;
+  text-align: center;
+  padding:20px;
+  width:128px;
+  border-radius: 3px;
+  font-size:16px;
+  font-weight: 300;
+  line-height: .75;
+}
+
+.iconic.iconic-microphone:before {
+  content: '\1f3a4';
+}
+
+.iconic[min-width~="100px"] {
+  font-weight: 400;
+  font-size:64px;
+}
+
+.iconic[min-width~="200px"] {
+  font-weight: 500;
+  font-size:255px;
+}</pre>
+          </div>
+        </div>
+      </article>
+    </section>
+    <div class="menu">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <ul class="pager">
+              <li class="text-center"><a data-toggle="modal" href="#modal-kickstarter" class="btn btn-default btn-kick btn-round">Get Iconic</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6">
+            <p><a href="https://twitter.com/share" class="twitter-share-button" data-via="useiconic">Tweet</a>
+              <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+            </p>
+          </div>
+          <div class="col-sm-6">
+            <p class="text-muted"><small>Laboriously loved by&nbsp;<a href="http://waybury.com" class="waybury-link">Waybury</a></small></p>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div id="modal-kickstarter" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" class="modal fade">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="container">
+              <div class="row">
+                <div class="col-sm-6">
+                  <h2>Make it happen</h2>
+                  <p>We want you to have Iconic and we <em>definitely</em> want you to use it. There's just one thing you need to do to make this a reality. <a href="http://www.kickstarter.com/projects/207474036/iconic-advanced-icons-for-the-modern-web" class="kick">Back Iconic on Kickstarter</a> and <a href="https://twitter.com/useiconic" class="tweet">spread the word</a>. OK, that's two things, but you get the point.</p>
+                  <p>In all seriousness, please help us get Iconic in your hands (figuratively). We know you'll love it.</p>
+                  <p>&nbsp;</p>
+                  <p><a href="http://www.kickstarter.com/projects/207474036/iconic-advanced-icons-for-the-modern-web" class="btn btn-kick btn-round">Back us on Kickstarter</a></p>
+                </div>
+                <div class="col-sm-6 embed-kickstarter">
+                  <iframe frameborder="0" height="380" width="220" src="http://www.kickstarter.com/projects/207474036/iconic-advanced-icons-for-the-modern-web/widget/card.html"></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="js/vendor/bootstrap.min.js"></script>
+    <script src="js/vendor/prettify.js"></script>
+    <script src="js/vendor/sizzle.js"></script>
+    <script src="js/vendor/elementQuery.min.js"></script> <!--https://github.com/tysonmatanich/elementQuery-->
+    <script src="js/plugins.js"></script>
+    <script src="js/site.js"></script>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+  </body>
+</html>
